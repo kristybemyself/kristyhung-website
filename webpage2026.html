@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- <iframe width="0" height="0" src="" frameborder="0" allowfullscreen></iframe>-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kristy Hung</title>
@@ -22,9 +23,11 @@
                  <li><a href="#" id="projectsBtn">Projects</a></li>
                  <li><a href="#" id="skillsBtn">Skills</a></li>
             </ul>
-            
+
             <div class="box-icons">
-             
+                <audio id="bg-music" src="audios/creativetech.mp3" loop hidden autoplay></audio>
+    <p><i class='bx bx-stop' id="musicBtn"></i></p>
+                <!--<p><i class='bx bx-stop' id="musicBtn" onclick="document.getElementById('bg-music').play()"></i></p></button>-->
                 <p><i class='bx bxl-whatsapp' id="whatsappBtn"></i></p>
                 </button>
                 <p><i class='bx bx-envelope' id="emailBtn"></i></p>
@@ -41,6 +44,33 @@
 
                 document.getElementById('linkedinBtn').addEventListener('click', function() {
                 window.open('https://www.linkedin.com/in/kristyhung130', '_blank');});
+                
+                const audio = document.getElementById('bg-music');
+                const btn = document.getElementById('musicBtn');
+
+                btn.addEventListener('click', function() {
+                if (audio.paused) {
+                audio.play();
+                btn.className = 'bx bx-stop';
+                } else {
+                audio.pause();
+                btn.className = 'bx bxs-music';
+                 }
+                });
+
+                // Update icon based on music state
+                function updateMusicIcon() {
+                btn.className = audio.paused ? 'bx bxs-music' : 'bx bx-stop';
+                }
+
+                // On page load (allow autoplay attempt)
+                window.addEventListener('DOMContentLoaded', function() {
+                setTimeout(updateMusicIcon, 500); // Give the browser time to attempt autoplay
+                });
+
+                // Also respond to direct play/pause events
+                audio.addEventListener('play', updateMusicIcon);
+                audio.addEventListener('pause', updateMusicIcon);
                 </script>
             
             
