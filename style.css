@@ -1212,10 +1212,8 @@ header ul a:hover{
     }
     
    spline-viewer {
-   position: absolute;
-  width: 90vw;
-  height: 100vh;
-  bottom: 10%;
+   width: 100vw;
+   height: 100vh;
     }
 
     .hero{
@@ -1226,13 +1224,14 @@ header ul a:hover{
         right:0;
         
     }
+    
     .hero-info{
-        bottom: 40%;
+        bottom: 30%;
     }
 
     .scroll-down{
         left: 45%;
-        bottom: 15%;
+        bottom: 8%;
     }
 
     .hero .skills-video-box{
@@ -1287,7 +1286,7 @@ header ul a:hover{
     overflow: hidden; /* image box title hidden*/
     padding-left: 0;
     width: 100%;
-    padding: 20px;         /* More space inside */
+    padding: 60px;         /* More space inside */
     margin-left: 0;        /* Remove negative margin to avoid cropping */
     box-sizing: border-box; 
     height: auto;          /* Let content decide height */
@@ -1316,7 +1315,7 @@ header ul a:hover{
 
     .project-info p{
         max-width: 400px;
-        font-size: 17px;
+        font-size: 13px;
     }
 
     .slogan h3{
@@ -1343,7 +1342,7 @@ header ul a:hover{
     }
 
     .slider{
-    bottom: 1%;
+    bottom: -5%;
     }
 
  /*   .contact-section .section-title {
@@ -1387,7 +1386,7 @@ header ul a:hover{
     }
 
         .contact-section .section-title {
-        top: -10%;
+        top: 0%;
         left:30%;
     }
 
@@ -1403,16 +1402,6 @@ header ul a:hover{
 /*mobile*/
 @media screen and (max-width: 480px) {
 
-   spline-viewer {
-  position: absolute;
-  top: -10;
-  left: -10;
-  width: 120vw;
-  height: 100vh;
-  z-index: -1;
-  bottom: 15%;
-    }
-
     .left {
         scale: 0.9;
         margin-left: -30px;
@@ -1427,7 +1416,7 @@ header ul a:hover{
     }
 
     .hero-info{
-        bottom: 50%;
+        bottom: 15%;
     }
 
     .hero-info h1{
@@ -1435,8 +1424,8 @@ header ul a:hover{
     }
 
     .scroll-down{
-        bottom: 15%;
-        left: 48%;
+        bottom: 5%;
+        left: 50%;
     }
 
     .section-title {
@@ -1457,6 +1446,24 @@ header ul a:hover{
         font-size: 5px;
     }
 
+    .project-info{
+  /* image box title hidden*/
+    width: 150%;
+    padding: 40%;   
+    box-sizing: border-box; 
+    height: auto;          /* Let content decide height */    /* More space inside */
+    }
+
+    .project-info button{
+        padding: 5px 10px;
+        height: 100px;
+        width: 100px;
+    }
+
+     .project-info h1{
+        font-size: 20px;
+    }
+
     .slogan h1{
     margin-top: 50%;
     padding-top: -50px;
@@ -1467,6 +1474,10 @@ header ul a:hover{
     padding-top: 250px; /* Increase the value as needed */
     font-size: 15px;
     }
+
+    .artworks-section h1{
+    font-size: 30px;
+   }
 
     .project-card {
         height: 50%;
@@ -1484,24 +1495,96 @@ header ul a:hover{
         margin-left: -80px;
     }
 
+    .artworks-card-box{
+    width: 90%;
+    gap: 50px;
+    }
+
+    .artworks-card{
+    width: 5%;
+    min-width: 300px;
+    height: 500px;
+    }
+
+    .artworks-card h2{
+    top: 5%;
+    left: 5%;
+    font-size: 25px;
+    }
+
+    .artworks-card p{
+    top: 20%;
+    left: 5%;
+    max-width: 300px;
+    font-size: 15px;
+    }
+
+    .artworks-card .explore-more{
+    left: 8%;
+    bottom: 0%;
+    height: 50%;
+    }
+
+    .artworks-section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    border-top: none;
+    padding-bottom: 10%;
+    }
+
+    .explore-more img{
+    width: 210px;
+    height: 160px;
+    border-radius: 40px;
+    }
+
     .skills-box{
-        height: 120vh;
-        margin-right: 30px;
+    height: 120vh;
     }
 
         .Designer{
-        top: 21%;
+        top: 15%;
         left: 5%;
+    }
+
+    .Designer h1{
+        margin-bottom: 0;
+        margin-top: 20px;
     }
 
     .coder{
-        top: 50%;
+        top: 40%;
         left: 5%;
     }
 
-    .slider{
-        bottom: 0%;
+    .coder h1{
+        margin-bottom: 0;
     }
+
+    .slider{
+        bottom: 10%;
+    }
+
+.social-box {
+    gap: 25px;
+}
+
+.social-box a{
+    font-size: 14px;
+}
+
+.social-box i{
+    color: #689fff;
+    font-size: 5px;
+    margin-right: 120px;
+}
+
+.social-icons a i {
+    display: none;
+}
 
     .contact-section{
         scale: 0.9;
@@ -1523,5 +1606,52 @@ header ul a:hover{
 
     .footer .box-icons{
         gap: 10px;
+    }
+}
+
+/*mobile*/
+@media screen and (max-width: 400px) {
+
+   .project-info{
+  /* image box title hidden*/
+    width: 180; /* More space inside */
+    }
+
+     .project-info h1{
+    font-size: 19px;
+    }
+
+    .project-info p {
+     /*display: none;*/
+    }
+
+    .slogan h1{
+    margin-top: 50%;
+    padding-top: -50px;
+    font-size: 30px;
+    }
+
+    .slogan h3{
+    padding-top: 250px; /* Increase the value as needed */
+    font-size: 15px;
+    }
+
+    .Designer{
+        top: 15%;
+        left: -3%;
+    }
+
+    .Designer h1{
+        margin-bottom: 0;
+        margin-top: 20px;
+    }
+
+    .coder{
+        top: 40%;
+        left: -3%;
+    }
+
+    .coder h1{
+        margin-bottom: 0;
     }
 }
