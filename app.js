@@ -3,14 +3,17 @@ const video2 = document.getElementById('projectVideo2');
 const video3 = document.getElementById('projectVideo3');
 
 // Sidebar elements //
-const sideBar = document.querySelector('.sidebar');
-const menu = document.querySelector('.menu-icon');
-const closeIcon = document.querySelector('.close-icon')
+//const sideBar = document.querySelector('.sidebar');
+//const menu = document.querySelector('.menu-icon');
+//const closeIcon = document.querySelector('.close-icon')//
 
 
 const hoverSign = document.querySelector('.hover-sign');
 
 const videoList =[video1, video2, video3];
+
+const url = 'filess/CV2025-26_HLW.pdf';  // path to your pdf within filess folder
+const link = document.createElement('a');
 
 videoList.forEach (function(video){
     video.addEventListener("mouseover", function(){
@@ -23,23 +26,35 @@ videoList.forEach (function(video){
 })
 })
 
-// Sidebar elements //
-menu.addEventListener("click", function(){
-    sideBar.classList.remove("close-sidebar")
-    sideBar.classList.add("open-sidebar")
-});
+const sideBar = document.querySelector('.sidebar');
+const menuButton = document.querySelector('.menu-icon');
+const closeButton = document.querySelector('.close-icon');
 
-closeIcon.addEventListener("click", function(){
-    sideBar.classList.remove("open-sidebar");
-    sideBar.classList.add("close-sidebar");
-    
+// OPEN SIDEBAR
+menuButton.addEventListener("click", function(){
+    sideBar.classList.remove('close-sidebar')
+    sideBar.classList.add('open-sidebar')
 })
 
+closeButton.addEventListener("click", function(){
+    sideBar.classList.remove('open-sidebar')
+    sideBar.classList.add('close-sidebar')
+})
+
+// Sidebar elements //
+//menu.addEventListener("click", function(){
+//    sideBar.classList.remove("close-sidebar")
+//    sideBar.classList.add("open-sidebar")
+//});
+
+//closeIcon.addEventListener("click", function(){
+//    sideBar.classList.remove("open-sidebar");
+//    sideBar.classList.add("close-sidebar");
+//})
+
 document.getElementById('downloadmyCVBtn').addEventListener('click', function() {
-  const url = 'filess/CV2025-26_HLW.pdf';  // path to your pdf within filess folder
-  const link = document.createElement('a');
   link.href = url;
-  link.download = 'KristyHung_CV2025-26.pdf';  // download file name for the user
+  link.download = 'CV_KristyHung.pdf';  // download file name for the user
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
